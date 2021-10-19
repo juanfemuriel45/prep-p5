@@ -1,0 +1,39 @@
+#logo{
+    text-align: center !important;
+}
+.enemigos{
+    background-color: red;
+}
+
+#darth{
+    font-size: larger;
+    font-style: italic;
+}
+
+.rebelde{
+    background-color: blue;
+}
+
+.soldados{
+    border-style: dashed;
+    letter-spacing: 1em;
+}
+
+.apoyo{
+    text-align: center;
+}
+
+.naves{
+    text-transform: uppercase;
+}
+
+.droides{
+    text-align: center;
+}
+body{
+    background-image:url(background.webp)
+}
+img{
+    height: 200px;
+    width: auto;
+}

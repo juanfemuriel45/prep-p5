@@ -1,0 +1,17 @@
+.foto{
+    border-radius: 50%;
+    width: 40%;
+}
+
+.img-project{
+    width: 50%;
+}
+
+.title{
+    text-align: center;
+}
+
+.contactame{
+    text-align: center;
+    background-color: gold;
+}

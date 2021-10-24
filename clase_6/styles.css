@@ -9,9 +9,27 @@
 
 .title{
     text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .contactame{
     text-align: center;
     background-color: gold;
+}
+
+.footer{
+    background-color: #495057;
+    color:whitesmoke;
+    padding-top:2%;
+}
+
+.copy{
+    background-color: #212529;
+    color:rgb(206, 208, 212);
+    margin-top: 3%;
+    text-align: center;
+}
+p{
+    margin-bottom: 0%;
 }

@@ -104,7 +104,7 @@ console.log('El poema ordenado es: ' + poemaOrdenado);
 
 /* *********************************************************
                         isUniform()
-************************************************************/
+************************************************************
 
 array1=['a','b','p'];
 
@@ -126,7 +126,29 @@ console.log('La validacion es: ' + isUniform(array1));
 /* *********************************************************
                         Biggest Smallest
 ************************************************************/
+function biggest_smallest(array){
+    let elementMax= 0;
+    let elementMin= array[0];
+    let newArray=[];
 
+    array.forEach(element => {
+        if(element > elementMax){
+            elementMax = element;
+        }
+
+        if(element < elementMax){
+            elementMin=element;
+        }
+    });
+
+    newArray.push(elementMin);
+    newArray.push(elementMax)
+    return newArray;
+}
+
+let array1 = [19,2,1,4,5];
+let resultado = biggest_smallest(array1);
+console.log('El resultado es: ' + resultado)
 
 
 /////////////////////////////////////////////////////////////

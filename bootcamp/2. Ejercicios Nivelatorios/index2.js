@@ -138,7 +138,7 @@ function middleCharacter(str){
         return resultado
     }
 }
-console.log(middleCharacter("pasea"));
+// console.log(middleCharacter("pasea"));
 /**********************************************************************************************************************/
 
 
@@ -242,11 +242,18 @@ sus anteriores.
 Ejemplo:
 arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2}, {hola: 3}, {hola: 4}, {hola: 5 }]
 arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2}, {chau: 3}]
-
 ---------------------------------------------------------------------------------------------------------------------*/
+function arregloDeObjetos2(number, word){
+    let arr=[]
+    for (let i = 0; i < number; i++) {
+        let obj={}
+        obj[word]=i
+        arr.push(obj)        
+    }
+    return arr
+}
 
-
-//console.log(arregloDeObjetos2(3, 'chau'));
+// console.log(arregloDeObjetos2(5, 'hola'));
 /**********************************************************************************************************************/
 
 /*--------------------------------------------------------------------------------------------------------------------/
@@ -259,10 +266,26 @@ Ejemplo:
 oneProperty(arreglo, “edad”) debe retornar [ { edad: 20 }, { edad: 22 } ]
 oneProperty(arreglo, “name”) debe retornar [ { name: “lucas”}, { name: “santi” } ]
 ---------------------------------------------------------------------------------------------------------------------*/
+function oneProperty(arr, string){
+    newArray=[]
+    let obj={}
 
-
-// var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
-// console.log(oneProperty(arreglo, 'edad'));
+    for (let i = 0; i < arr.length; i++) {
+        if(string =='edad'){
+            obj={}
+            obj[string]=arr[i][string]
+            newArray.push(obj)
+        }
+        if(string == 'name'){
+            obj={}
+            obj[string]=arr[i][string]
+            newArray.push(obj)
+        }
+    }
+    return newArray
+}
+var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
+console.log(oneProperty(arreglo, 'edad'));
 /**********************************************************************************************************************/
 
 
@@ -280,10 +303,29 @@ Ejemplo:
 warWord(“hola”, “chau”) debe retornar  “hola” (36 > 33)
 warWord(“love”, “friendship”) debe retornar “friendship”
 ---------------------------------------------------------------------------------------------------------------------*/
+function warWords(string1, string2){
+    let result =''
+    var abc = {a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:21,v:22,w:23,x:24,y:25,z:26}
+    let sumString1=0
+    let sumString2=0
 
+    for(let i=0; i< string1.length; i++){
+        sumString1+=abc[string1[i]]
+    }
+
+    for(let i=0; i< string2.length; i++){
+        sumString2+=abc[string2[i]]
+    }
+
+    if(sumString1>sumString2){
+        return string1
+    }else{
+        return string2
+    }
+}
 
 // console.log(warWords('love', 'friendship'));
-// console.log(warWords('hola', 'chau') )
+//console.log(warWords('love', 'friendship') )
 /**********************************************************************************************************************/
 
 

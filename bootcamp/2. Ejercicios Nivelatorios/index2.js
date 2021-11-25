@@ -5,7 +5,6 @@ la consola cada número del loop.
 En caso de que el número de la iteración, sumado con el número pasado por parámetro, sea par, mostrá en la consola “El
 número x es par”. 
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 function loopDePares(number){
     let suma =0;
     for(let i=0; i<=100; i++){
@@ -16,10 +15,8 @@ function loopDePares(number){
         }
     }
 }
-=======
 
 
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 //loopDePares(7);
 /**********************************************************************************************************************/
 
@@ -31,7 +28,6 @@ mostrando en la consola cada número del loop.
 Ahora, modificá el código para que, en caso de que ese número sumado con el número pasado por parámetro sea impar, 
 muestre en la consola la palabra pasada por parámetro.
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 function loopDeImpares(number, word){
     let suma =0;
     for(let i=0; i<=100; i++){
@@ -44,11 +40,9 @@ function loopDeImpares(number, word){
 }
 
 // loopDeImpares(2,'Juan Felipe');
-=======
 
 
 //loopDeImpares(2,'Juan Felipe');
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -56,7 +50,6 @@ function loopDeImpares(number, word){
 3. Sumatoria
     Debés crear una función llamada `sumattion` que reciba un número como parámetro y que devuelva la sumatoria de 
     todos sus números anteriores, incluso ese mismo.
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------*/
 function sumattion(number){
     let sum=number;
@@ -66,14 +59,7 @@ function sumattion(number){
     return sum
 }
 
-// console.log(sumattion(2));
-=======
-
----------------------------------------------------------------------------------------------------------------------*/
-
-
 //console.log(summation(8));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -85,17 +71,11 @@ function sumattion(number){
     Ejemplo:
     callback(5, (num)=>{return num*10}) debe retornar 50
     callback(25, (num)=>{return num/5}) debe retornar 5
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------*/
 function callback(number, fn){
     let resultado = fn(number);
     return resultado;
 }
-=======
-
----------------------------------------------------------------------------------------------------------------------*/
-
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 
 // console.log(callback(5, (num)=>{return num*10}));
 /**********************************************************************************************************************/
@@ -103,7 +83,6 @@ function callback(number, fn){
 
 /*--------------------------------------------------------------------------------------------------------------------/
 5. Nuevo Arreglo
-<<<<<<< HEAD
     Debés crear una función llamada `nuevoArreglo` que reciba un número como parámetro y que devuelva un nuevo arreglo 
     con tantos elementos como el número que le hayas pasado.
     Ejemplo: 
@@ -121,24 +100,6 @@ function nuevoArreglo(array){
 /**********************************************************************************************************************/
 
 
-=======
-
-    Debés crear una función llamada `nuevoArreglo` que reciba un número como parámetro y que devuelva un nuevo arreglo 
-    con tantos elementos como el número que le hayas pasado.
-
-    Ejemplo: 
-    nuevoArreglo(5) debe retornar [1,2,3,4,5]
-    nuevoArreglo(10) debe retornar [1,2,3,4,5,6,7,8,9,10]
-
----------------------------------------------------------------------------------------------------------------------*/
-
-
-//console.log(nuevoArreglo(10));
-/**********************************************************************************************************************/
-
-
-
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /*--------------------------------------------------------------------------------------------------------------------/
 6. Similar String.split()
     Debés crear una función llamada `split` que reciba un `string` y simule el comportamiento de la función original 
@@ -150,7 +111,6 @@ Ejemplo:
 split(“hola”) debe retornar [“h”,”o”,”l”,”a”]
 split(“chau”) debe retornar [“c”,”h”,”a”,”u”]
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 function split(str){
     let array=[]
     for(let i=0; i<str.length; i++){
@@ -159,13 +119,6 @@ function split(str){
     return array;
 }
 // console.log(split("felipe"));
-=======
-
-
-//console.log(split("felipe"));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
-/**********************************************************************************************************************/
-
 
 /*--------------------------------------------------------------------------------------------------------------------/
 7. Carácter del medio
@@ -175,7 +128,6 @@ Ejemplo:
 middleCharacter(“plataforma5”) debe retornar “f”
 middleCharacter(“hola”) debe retornar “ol”
 middleCharacter(“cosas”) debe retornar “s”
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------*/
 function middleCharacter(str){
     let longitud = Math.round(str.length/2);
@@ -189,15 +141,8 @@ function middleCharacter(str){
         return resultado
     }
 }
-// console.log(middleCharacter("pasea"));
-=======
-
----------------------------------------------------------------------------------------------------------------------*/
-
-
 
 //middleCharacter("hola");
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -210,10 +155,8 @@ Ejemplo:
 moveZeros([false,1,0,1,2,0,1,3,"a"]) debe retornar [false,1,1,2,1,3,"a",0,0]
 moveZeros([1,2,0,1,0,1,0,3,0,1]) debe retornar [1,2,1,1,3,1,0,0,0,0]
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 
 // console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
-=======
 function moveZeros(arr){
     let ceros = []
     let newArr = []
@@ -228,16 +171,11 @@ function moveZeros(arr){
     return newArr
 }
 // console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]))
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
 /*--------------------------------------------------------------------------------------------------------------------/
-<<<<<<< HEAD
-9. Manejando dos arreglos
-=======
 9. Manejando dos arreglos   ---  4 minutos
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 Debés crear una función llamada `arrayHandler` que reciba dos arreglos de igual largo como parámetros y 
 muestre en la consola “Soy {elemento de array 1} y yo soy {elemento de array 2}”.
 
@@ -248,24 +186,17 @@ Soy 2 y yo soy o
 Soy 3 y yo soy l
 Soy 4 y yo soy a
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 
-=======
 function arrayHandler(arr1, arr2){
     for(let i=0; i<arr1.length; i++){
         console.log(`Soy ${arr1[i]} y yo soy ${arr2[i]}`);
     }
 }
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 //console.log(arrayHandler([1,2,3,4], ['h','o','l','a']))
 /**********************************************************************************************************************/
 
 /*--------------------------------------------------------------------------------------------------------------------/
-<<<<<<< HEAD
-10. Mezclando arreglos
-=======
 10. Mezclando arreglos --- 3 minutos
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 Debés crear una función llamada `mezclarArreglos` que reciba dos arreglos como parámetros y devuelva uno nuevo con los
 elementos de ambos, de 1 en 1.
 
@@ -274,9 +205,7 @@ mezclarArreglos([1,2,3,4],[“h”,”o”,”l”,”a”]) debe retornar [1, �
 mezclarArreglos([1,2,3,4], [“h”,”p”]) debe retornar [1, “h”, 2, “p”, 3 , 4]
 mezclarArreglos([“h”,”p”], [1,2,3,4]) debe retornar [“h”, 1, “p”, 2, 3 , 4]
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 
-=======
 function mezclarArreglos(arr1, arr2){
     let newArray=[]
 
@@ -286,16 +215,12 @@ function mezclarArreglos(arr1, arr2){
     }
     return newArray
 }
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 // console.log(mezclarArreglos([1,2,3,4], ['h','o','l','a']))
 /**********************************************************************************************************************/
 
 /*--------------------------------------------------------------------------------------------------------------------/
-<<<<<<< HEAD
 11. Arreglos
-=======
 11. Arreglos ---- 40 minutos
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 Investiga los siguientes métodos de los arreglos y replica su funcionamiento de manera lógica al igual que lo hiciste
  en el ejercicio número 5: 
 
@@ -305,10 +230,8 @@ Investiga los siguientes métodos de los arreglos y replica su funcionamiento de
 4. “map([1,2,3,4,5], (e)=>{return e * 10})” debe retornar [10, 20, 30, 40, 50]
 ---------------------------------------------------------------------------------------------------------------------*/
 
-<<<<<<< HEAD
 
 
-=======
 function join(arr, caracter){
     string ="";
     arr.forEach(element => {
@@ -343,17 +266,12 @@ function map(arr, fn){
 // console.log("replica de pop: " + pop([1,2,3,4,5]));
 // console.log("replica de filter: " + filter([1,2,3,4,5], (e)=>{return e%2===0}));
 //console.log("replica de Map: " + map([1,2,3,4,5], (e)=>{return e * 10}));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
 
 /*--------------------------------------------------------------------------------------------------------------------/
-<<<<<<< HEAD
-12. Mínima Suma
-=======
 12. Mínima Suma --- 5 minutos
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 Debés crear una función llamada `minSum` que reciba un arreglo de números desordenados  y devuelva la suma entre los
  dos números más chicos.
 
@@ -361,11 +279,9 @@ Ejemplo:
 minSum([7, 6, 5, 4, 3, 2, 1]) debe retornar 3 (2 + 1)
 minSum([1, 10, 43, 900, 20, 8]) debe retornar 9
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 
 
 //console.log(minSum([1, 10, 43, 900, 20, 8]))
-=======
 function minSum(arr){
     let arrOrdenado = arr.sort();
     let sum = arrOrdenado[0]+arrOrdenado[1]
@@ -373,7 +289,6 @@ function minSum(arr){
 }
 
 //console.log(minSum([7, 6, 5, 4, 3, 2, 1]))
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -386,11 +301,9 @@ Ejemplo:
 arregloDeObjetos(5) debe retornar [{valor: 1}, {valor: 2}, {valor: 3}, {valor: 4}, {valor: 5}]
 arregloDeObjetos(3) debe retornar [{valor: 1}, {valor: 2}, {valor: 3}]
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 
 
 //console.log(arregloDeObjetos(3));
-=======
 function arregloDeObjetos (number){
     let array=[]
     let obj={}
@@ -401,7 +314,6 @@ function arregloDeObjetos (number){
     return array
 }
 console.log(arregloDeObjetos(3));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -414,7 +326,6 @@ sus anteriores.
 Ejemplo:
 arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2}, {hola: 3}, {hola: 4}, {hola: 5 }]
 arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2}, {chau: 3}]
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------*/
 function arregloDeObjetos2(number, word){
     let arr=[]
@@ -427,13 +338,11 @@ function arregloDeObjetos2(number, word){
 }
 
 // console.log(arregloDeObjetos2(5, 'hola'));
-=======
 
 ---------------------------------------------------------------------------------------------------------------------*/
 
 
 //console.log(arregloDeObjetos2(3, 'chau'));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 /*--------------------------------------------------------------------------------------------------------------------/
@@ -445,7 +354,6 @@ Ejemplo:
  var  arreglo = [ { name: “lucas”, edad: 20 }, { name: “santi”, edad: 22 } ]
 oneProperty(arreglo, “edad”) debe retornar [ { edad: 20 }, { edad: 22 } ]
 oneProperty(arreglo, “name”) debe retornar [ { name: “lucas”}, { name: “santi” } ]
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------------------------------------------*/
 function oneProperty(arr, string){
     newArray=[]
@@ -467,12 +375,10 @@ function oneProperty(arr, string){
 }
 var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
 console.log(oneProperty(arreglo, 'edad'));
-=======
 
 
 // var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
 // console.log(oneProperty(arreglo, 'edad'));
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -490,7 +396,6 @@ Ejemplo:
 warWord(“hola”, “chau”) debe retornar  “hola” (36 > 33)
 warWord(“love”, “friendship”) debe retornar “friendship”
 ---------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 function warWords(string1, string2){
     let result =''
     var abc = {a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:21,v:22,w:23,x:24,y:25,z:26}
@@ -514,12 +419,10 @@ function warWords(string1, string2){
 
 // console.log(warWords('love', 'friendship'));
 //console.log(warWords('love', 'friendship') )
-=======
 
 
 // console.log(warWords('love', 'friendship'));
 // console.log(warWords('hola', 'chau') )
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 /**********************************************************************************************************************/
 
 
@@ -553,10 +456,7 @@ validarPrefijo(“8012345678”) debe retornar “El número no pertenece a nues
 ---------------------------------------------------------------------------------------------------------------------*/
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 //console.log(validarPrefijo('5912345678'));
 /**********************************************************************************************************************/
 
@@ -594,7 +494,6 @@ edad: 22,
 ---------------------------------------------------------------------------------------------------------------------*/
 
 
-<<<<<<< HEAD
 
 var prueba = {
 	nombre: 'santi',
@@ -603,8 +502,6 @@ var prueba = {
 	documento: 44444444
 }
 
-=======
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 //console.log(reverseKeys(prueba));
 /**********************************************************************************************************************/
 
@@ -640,10 +537,7 @@ rotar([1, 2, 3, 4, 5], 3) debe retornar [3, 4, 5, 1, 2]
 ---------------------------------------------------------------------------------------------------------------------*/
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3bde015cab2edff0b1e81e86d2a3f80140fa6ab7
 //console.log(rotar([1, 2, 3, 4, 5], 3));
 /**********************************************************************************************************************/
 

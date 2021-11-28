@@ -313,7 +313,7 @@ function arregloDeObjetos (number){
     }
     return array
 }
-console.log(arregloDeObjetos(3));
+// console.log(arregloDeObjetos(3));
 /**********************************************************************************************************************/
 
 
@@ -339,7 +339,6 @@ function arregloDeObjetos2(number, word){
 
 // console.log(arregloDeObjetos2(5, 'hola'));
 
----------------------------------------------------------------------------------------------------------------------*/
 
 
 //console.log(arregloDeObjetos2(3, 'chau'));
@@ -374,7 +373,7 @@ function oneProperty(arr, string){
     return newArray
 }
 var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
-console.log(oneProperty(arreglo, 'edad'));
+// console.log(oneProperty(arreglo, 'edad'));
 
 
 // var  arreglo = [ { name: 'lucas', edad: 20 }, { name: 'santi', edad: 22 } ]
@@ -418,16 +417,12 @@ function warWords(string1, string2){
 }
 
 // console.log(warWords('love', 'friendship'));
-//console.log(warWords('love', 'friendship') )
-
-
-// console.log(warWords('love', 'friendship'));
 // console.log(warWords('hola', 'chau') )
 /**********************************************************************************************************************/
 
 
 /*--------------------------------------------------------------------------------------------------------------------/
-17. Prefijos Telefónicos
+17. Prefijos Telefónicos    --- 11 minutos
 	Utils:
 	var prefijos = [54, 55, 56, 57, 58]
  var paises = ["argentina", "brasil", "chile", "colombia", "venezuela"]
@@ -436,15 +431,12 @@ Debés crear una función llamada `validarPrefijo` que reciba un número por par
 Generar un objeto desde dos arreglos dados. Deberá tener como propiedades, los números de prefijos, y como valor, el 
 país correspondiente a cada prefijo.
 ejemplo : 
-
 {
 	54: “Argentina”,
 	55: ”Brasil”,
 	56: ”Ecuador”,
 	57: ”Bolivia”
 }
-
-
 Validar si los dos primeros números del pasado por parámetro existen en el objeto de prefijos telefónicos. En caso 
 de ser correcto, deberá retornar “Este número pertenece a X”.
 En caso de ser incorrecto deberá retornar “El número no pertenece a nuestros países”
@@ -454,13 +446,24 @@ validarPrefijo(“5412345678”) debe retornar “Este número pertenece a Argen
 validarPrefijo(“5712345678”) debe retornar “Este número pertenece a Bolivia”
 validarPrefijo(“8012345678”) debe retornar “El número no pertenece a nuestros países”
 ---------------------------------------------------------------------------------------------------------------------*/
-
-
-
-//console.log(validarPrefijo('5912345678'));
+function validarPrefijo(number){
+    var prefijos = [54, 55, 56, 57, 58]
+    var paises = ["argentina", "brasil", "chile", "colombia", "venezuela"]
+    let obj = {}
+    let result
+    //se llena el objeto
+    for(let i=0; i<prefijos.length; i++ ){
+        obj[prefijos[i]]=paises[i]
+    }
+    number = number[0].concat(number[1])
+    if(number in obj){
+        return result="Este numero pertenece a: "+obj[number]
+    }else{
+        return result="El numero no pertenece a nuestros paises"
+    }
+}
+// console.log(validarPrefijo('5712345678'));
 /**********************************************************************************************************************/
-
-
 
 /*--------------------------------------------------------------------------------------------------------------------/
 18. {value: key} kelue: vay
@@ -492,8 +495,37 @@ edad: 22,
 }
 
 ---------------------------------------------------------------------------------------------------------------------*/
-
-
+function reverseKeys(obj){
+    let tipo= typeof obj;
+    let resultado;
+    //se valida si el dato es object o no
+    if (tipo != 'object'){
+        resultado = `error, input can’t be a ${tipo}`
+    }else{
+        //se hace una segunda validacion si es un array
+        if(Array.isArray(obj)){
+            resultado = `error, input can’t be an Array`
+        }else{
+            let newObj={};
+            //se extraen los valores del objeto
+            let values = Object.values(obj)
+            //se extraen los keys del objeto
+            let keys = Object.keys(obj)
+            for(let i=0; i<values.length; i++){
+                //se valida si el valor del atributo es string
+                if(typeof values[i]== 'string'){
+                    //se intercambia de lugar el valor y la key
+                    newObj[values[i]]=keys[i]            
+                }else{
+                     //se agregan los datos restantes al nuevo objeto
+                    newObj[keys[i]]=values[i]           
+                }
+            }
+            resultado = newObj                           
+        }
+    }
+    return resultado;
+}
 
 var prueba = {
 	nombre: 'santi',
@@ -502,7 +534,7 @@ var prueba = {
 	documento: 44444444
 }
 
-//console.log(reverseKeys(prueba));
+// console.log(reverseKeys(prueba));
 /**********************************************************************************************************************/
 
 
@@ -519,10 +551,22 @@ palindromo(“anilina”) debe retornar true
 palindromo(“Ana”) debe retornar true
 palindromo(“Enrique”) debe retornar false
 ---------------------------------------------------------------------------------------------------------------------*/
+function palindromo(string){
+    let arr = string.split('');
+    let temp = string.split('');
+    let arrReverse= temp.reverse();
+    let result =false;
 
-
-
-//console.log(palindromo('oso'));
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]==arrReverse[i]){
+            result = true
+        }else{
+            break;
+        }
+    } 
+    return result; 
+}
+//console.log(palindromo('enrique'));
 /**********************************************************************************************************************/
 
 
@@ -535,10 +579,19 @@ Ejemplo:
 rotar([1, 2, 3, 4, 5], 2) debe retornar [4, 5, 1, 2, 3]
 rotar([1, 2, 3, 4, 5], 3) debe retornar [3, 4, 5, 1, 2]
 ---------------------------------------------------------------------------------------------------------------------*/
-
-
-
-//console.log(rotar([1, 2, 3, 4, 5], 3));
+function rotar(arr, number){
+    let newArr=[]
+    for(let i=0; i<number; i++){
+        let cola = arr[arr.length-1]; 
+        for(let j=0; j<arr.length-1; j++){
+            newArr[j+1]=arr[j]
+        }
+        newArr[0]= cola
+        arr=newArr.slice()
+    } 
+    return newArr
+}
+// console.log(rotar([1, 2, 3, 4, 5], 3));
 /**********************************************************************************************************************/
 
 
@@ -554,7 +607,15 @@ consecutivosSimilares(“ABABABAB”) debe retornar 0
 consecutivosSimilares(“BABABA”) debe retornar 0
 consecutivosSimilares(“AAABBB”) debe retornar 4
 ---------------------------------------------------------------------------------------------------------------------*/
+function consecutivosSimilares(string){
+    let sum=0;
+    for(let i=0; i<string.length; i++){
+        if(string[i]==string[i+1]){
+            sum+=1
+        }
+    }
+    return sum
+}
 
-
-//console.log(consecutivosSimilares('AAAA'));
+console.log(consecutivosSimilares('AAABBB'));
 /**********************************************************************************************************************/
